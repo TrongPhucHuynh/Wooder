@@ -1,0 +1,46 @@
+.nav {
+    width: 100vw;
+    height: 100vh;
+    background: var(--black-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include transform(initial);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.7s);
+    @include transform(translateX(100%));
+    @include transform-origin(center right);
+
+    ul {
+        flex-direction: column;
+        @include mid;
+
+        li {
+            margin: 50px auto;
+            text-align: center;
+
+            a {
+                font-size: 22px;
+                color: var(--while-color);
+                text-transform: uppercase;
+
+                &:hover {
+                    color: var(--main-color);
+                }
+            }
+
+        }
+
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        @include transition(all 0.7s);
+        @include transform(translateX(0%));
+        @include transform-origin(center right);
+
+    }
+}

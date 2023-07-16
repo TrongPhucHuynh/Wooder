@@ -1,0 +1,82 @@
+:root {
+    // gap, maxwidth of page, container-fluid, container
+    --gap: 28px;
+
+    --max-width-page: 2560px;
+    --max-width-container-fluid: 1920px;
+    --max-width-container: calc(1196px + calc(var(--gap) * 2));
+
+    // Color
+    --main-color: #bea67c;
+    --while-color: #FFFFFF;
+    --black-color: #000000;
+    --grey-color: #464646;
+
+    //Font-size Lineheight Text
+    --fs-h1: 8.4rem;
+    --lh-h1: normal;
+
+    --fs-h2: 4.6rem;
+    --lh-h2: 5.6rem;
+
+    --fs-h3: 1.8rem;
+    --lh-h3: 2.4rem;
+
+    --fs-text-btn: 1.5rem;
+    --lh-text-btn: normal;
+
+    --fs-body-text: 1.8rem;
+    --lh-body-text: 2.5rem;
+
+    --fs-body-text-small: 1.4rem;
+    --lh-body-text-small: normal;
+
+    //General
+    --height-header: 90px;
+    --height-btn: 44px;
+    --pd-section: 120px;
+
+    // Timing
+    --duration: 0.5s;
+    --cubic: cubic-bezier(0.59, 0.29, 0.15, 0.93);
+
+    // Responsive
+    @include md {
+        --container-max-width: 1140px;
+    }
+
+    @include sm {
+        --container-max-width: 960px;
+        --pd-section: 90px;
+    }
+
+    @include xs {
+        --container-max-width: 720px;
+        --gap: 10px;
+
+        --height-header: 64px;
+        --height-btn: 34px;
+        --pd-section: 60px;
+
+        --fs-h1: 5.6rem;
+
+        --fs-h2: 3.8rem;
+        --lh-h2: 4.2rem;
+
+        --fs-h3: 1.6rem;
+        --lh-h3: 2.2rem;
+
+        --fs-text-btn: 1.2rem;
+
+        --fs-body-text: 1.5rem;
+        --lh-body-text: 2rem;
+
+        --fs-body-text-small: 1.2rem;
+
+    }
+
+    @include xxs {
+        --container-max-width: 100%;
+    }
+
+}

@@ -1,0 +1,51 @@
+html {
+    font-size: 62.5%; // 1rem = 10px
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: var(--max-width-page);
+    margin: auto;
+    font-family: mr;
+    line-height: normal;
+    scroll-behavior: smooth;
+    @include customscroll;
+
+    &.--disable-scroll {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container-fluid {
+        width: 100%;
+        max-width: var(--max-width-container-fluid);
+        padding: 0 var(--gap);
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .container {
+        width: 100%;
+        max-width: var(--max-width-container);
+        padding: 0 var(--gap);
+        margin: 0 auto;
+        position: relative;
+    }
+
+    main {
+        position: relative;
+
+        // section {
+        //     padding: var(--pd-section) 0;
+        // }
+    }
+
+    @include xs {
+
+        .container-fluid,
+        .container {
+            padding: 0 15px;
+        }
+    }
+}

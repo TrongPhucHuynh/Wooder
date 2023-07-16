@@ -1,0 +1,66 @@
+footer {
+    background-color: var(--black-color);
+
+    .container {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .copyright {
+            @include mid(true);
+            color: var(--while-color);
+            font-size: 14px;
+            opacity: 0.5;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .back-to-top {
+            border: 1px solid var(--while-color);
+            padding: 6px 10px;
+            background: var(--grey-color);
+
+            cursor: pointer;
+
+
+            &.active {
+                position: fixed;
+                display: block;
+                right: 40px;
+                bottom: 40px;
+            }
+        }
+    }
+
+    @include xs {
+        .container {
+            height: 92px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+
+            .logo {
+                position: initial;
+                left: initial;
+                transform: initial;
+                margin: 20px auto;
+
+                img {
+                    width: 170px;
+                }
+            }
+
+            .back-to-top {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+    }
+}
